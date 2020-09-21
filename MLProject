@@ -1,0 +1,11 @@
+# sklearn_elasticnet_wine/MLproject
+
+name: tutorial
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      seed: float
+    command: "python train.py {seed}"
