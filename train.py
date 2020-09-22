@@ -38,7 +38,7 @@ if __name__ == "__main__":
             accuracy = 1-random.random()/(i+1)
             mlflow.log_metric("accuracy", accuracy)
             f = open(file_name, 'a+')  # open file in append mode
-            f.write('python rules : ' + str(accuracy) )
+            f.write('accuracy : ' + str(accuracy) )
             f.close()
         
         mlflow.log_artifact("./"+str(file_name))
